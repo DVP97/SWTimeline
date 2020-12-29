@@ -20,18 +20,33 @@ require('db.php');
             <a class="button" href="Register.html">Register</a>
         </nav>
     </header>
-    <tbody>
-        <?php
-        $sel_query="SELECT * FROM  Contenido;";
-        $result = mysqli_query($con,$sel_query);
-        while($row = mysqli_fetch_assoc($result)) { ?>
-        <tr>
-            <td><?php echo $row["Name"]; ?></td>
-            <td><?php echo $row["Release"]; ?></td>
-            <td><?php echo $row["Type"]; ?></td>
-            <td><?php echo $row["Info"]; ?></td>
-        </tr>
-       <?php }?>
-    </tbody>
+    <?php
+    $sel_query="SELECT * FROM  Contenido WHERE IDcontenido = 1;";
+    $result = mysqli_query($con,$sel_query);
+    while($row = mysqli_fetch_assoc($result)) { 
+    ?>
+    <!--falta añadir portada-->
+    <div class="container">
+        <div class="row">
+            <div class="col"><!--portada--><img src="media/Fulcrum.png" alt="icon" height="300px"></div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-md-7"><?php echo $row["Name"]; ?></div>
+                    <div class="col-md-3">aurebesh translation</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"><?php echo $row["Release"]; ?></div>
+                    <div class="col-md-2"><?php echo $row["Type"]; ?></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7"><?php echo $row["Info"]; ?></div>
+                    <div class="col">Insertar trailer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php }?>
+
 </body>
 </html>
