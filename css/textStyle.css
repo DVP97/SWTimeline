@@ -1,0 +1,14 @@
+@font-face{
+    font-family: "CustomJedi";
+    src: url('Starjedi.otf') format('opentype');
+  }
+  
+  .title {
+    font-family: CustomJedi;
+    font-size: 20px;
+    color:#FFE81F;
+  }
+
+  .info {
+
+  }
