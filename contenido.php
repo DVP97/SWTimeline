@@ -30,31 +30,34 @@ require('db.php');
     while($row = mysqli_fetch_assoc($result)) { 
     ?>
 
-    <!--Columna Portada-->
-    <div class="row">
-        <div class="col-xs-6 col-md-4">
-            <img src="media/Fulcrum.png" alt="icon">
-        </div>        
-        <!--Columna Informacion-->
-        <div class="col-xs-6 col-md-8">
-            <div class="row">
-                <div class="col-xs-6 col-md-9">
-                    <h1 class="title" style="color:#FFE81F";><?php echo utf8_decode($row["Name"]); ?></h1>
+    <div id="contenedor" class="container-fluid main-wrapper"
+        <!--Columna Portada-->
+        <div class="row no-gutters">
+            <div class="col">
+                <img src="media/Fulcrum.png" alt="icon">
+            </div> 
+            
+            <!--Columna Informacion-->
+            <div class="col">
+                <div class="row">
+                    <div class="col-xs-6 col-md-9">
+                        <h1 class="title" style="color:#FFE81F";><?php echo utf8_decode($row["Name"]); ?></h1>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-md-4">
-                    <h3 style="color:#FFE81F; font-size:20px; ">aurebesh translation</h3>
-                    <h3 style="color:#fdfbec; font-size:15px; "><?php echo $row["Release"]; ?></h3>
-                    <h3 style="color:#fdfbec; font-size:15px; "><?php echo $row["Type"]; ?> - Plataformas </h3>
+                <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                        <h3 style="color:#FFE81F; font-size:20px; ">aurebesh translation</h3>
+                        <h3 style="color:#fdfbec; font-size:15px; "><?php echo $row["Release"]; ?></h3>
+                        <h3 style="color:#fdfbec; font-size:15px; "><?php echo $row["Type"]; ?> - Plataformas </h3>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-md-6">
-                    <h3 style="color:azure; font-size:20px; text-align:justify"><?php echo $row["Info"]; ?></h3>
-                </div>
-                <div class="col-md-6">
-                    Insertar Trailer 
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <h3 style="color:azure; font-size:20px; text-align:justify"><?php echo $row["Info"]; ?></h3>
+                    </div>
+                    <div class="col-md-6">
+                        Insertar Trailer 
+                    </div>
                 </div>
             </div>
         </div>
