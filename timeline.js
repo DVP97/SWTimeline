@@ -4,7 +4,7 @@ app.controller('HomeController', function($scope) {
 
   $scope.goal_title = "Cronología de Star Wars";
   
-  $scope.dates = [0,1,2,3,4,5,6,7,8]; /* Años respecto BBY, creo que no deja poner letras */
+  $scope.dates = [0,0,2,3,4,0,6,7,8]; /* Años respecto BBY, creo que no deja poner letras */
   
   $scope.goal_real_estate = false;
   
@@ -50,7 +50,7 @@ $(document).ready(function(e) {
     console.log('goal click');
     $('body').fadeTo('ease', 0.3, function()
     {
-      $(this).css('background-image', 'url(http://extrawall.net/images/wallpapers/378_1920x1080_abstract_city.jpg)');
+      $(this).css('background-image', 'url(https://i.pinimg.com/originals/e1/8e/c6/e18ec65183a8a6334cce5906fb5ba487.jpg)');
     }).fadeTo('slow', 1);
 
   });

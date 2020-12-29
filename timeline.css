@@ -81,6 +81,11 @@ p.focus::after{
   top: -5px;
   left: 9px;
 }
+.col-md-12 {
+  color: #FFE81F;
+  -webkit-text-stroke: 2px black;
+  
+}
 
 .goal_wrap{
   position: absolute;
@@ -126,7 +131,7 @@ p.focus::after{
 }
 
 .goal_involve{
-  top: -400px;
+  top: -400px; /* Disminuyendo esta cantidad, aumentamos la distancia */
   width: 80px;
   height: 80px;
   line-height: 80px;

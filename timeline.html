@@ -6,6 +6,7 @@
 	<title> Timeline Sequence V1 </title>
 	
 	<!-- Hojas de estilo -->
+	<!-- De aquí salen los simbolitos de los círculos (hoja, gorro, casa) -->
 	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css'>
 	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 	<link rel="stylesheet" href="timeline.css">
@@ -24,9 +25,9 @@
 	<div class="structure" ng-app="app" ng-controller="HomeController">
 		
 		<div class="preloaderimg">
-			<img src="https://wallpaperscraft.com/image/tropics_sea_palm_trees_vacation_84858_2412x1810.jpg" alt="" style="display: none;" />
-			<img src="http://extrawall.net/images/wallpapers/378_1920x1080_abstract_city.jpg" alt="" style="display: none;" />
-			<img src="http://www.churchmilitant.com/images/uploads/2015-06-12-niles-x.jpg" alt="" style="display: none;"/>
+			<img src="https://i.pinimg.com/originals/e1/8e/c6/e18ec65183a8a6334cce5906fb5ba487.jpg" alt="Starkiller" style="display: none;"/>
+			<img src="https://wallpaperaccess.com/full/2828916.jpg" alt="Battle of the Heroes" style="display: none;"/>
+			<img src="https://wallpaperaccess.com/full/2828902.jpg" alt="Clone" style="display: none;"/>
 		</div>
 		
 		<div class="timeline"></div>
@@ -34,14 +35,14 @@
 		<div class="timeline">  
 			<div ng-repeat="date in dates track by $index" class="date date-{{$index}}">
 				<div class="goal_wrap goal_real_estate" ng-show="goal_real_estate_{{date}}">
-					<i class="fa fa-building" aria-hidden="true"></i>
+					<i class="fa fa-book" style="color: #FFE81F" aria-hidden="true"></i>
 				</div>
 				<!-- Esta clase de abajo se llamaba goal_wrap goal_involve-->
 				<div class="goal_wrap goal_involve" ng-show="goal_involve_{{date}}">
-					<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+					<i class="fa fa-film" style="color: #FFE81F" aria-hidden="true"></i>
 				</div> 
 				<div class="goal_wrap goal_retirement" ng-show="goal_retirement_{{date}}">
-					<i class="fa fa-leaf" aria-hidden="true"></i>
+					<i class="fa fa-gamepad" style="color: #FFE81F" aria-hidden="true"></i>
 				</div>
 				<p class="focus">
 					<a href="#">{{date}}</a>
