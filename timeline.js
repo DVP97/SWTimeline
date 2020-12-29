@@ -4,18 +4,22 @@ app.controller('HomeController', function($scope) {
 
   $scope.goal_title = "Cronología de Star Wars";
   
-  $scope.dates = [-30,-20,-10,-5,0,5,10,20,30]; /* Años respecto BBY, creo que no deja poner letras */
+  $scope.dates = [0,1,2,3,4,5,6,7,8]; /* Años respecto BBY, creo que no deja poner letras */
   
   $scope.goal_real_estate = false;
   
   /* Me parece que con esto se controlan las 'burbujas' que hay en algunos años */
   for (x in $scope.dates) {
-    if($scope.dates[x]== 30){
-      $scope.goal_real_estate_2016 = true;
-    }else if($scope.dates[x]== 20){
-      $scope.goal_retirement_2021 = true; 
-    }else if($scope.dates[x]== 10){
-      $scope.goal_involve_2018 = true; 
+    if($scope.dates[x]== 0){
+      $scope.goal_real_estate_0 = true;
+      $scope.goal_retirement_0 = true;
+      $scope.goal_involve_0 = true;
+    } else if($scope.dates[x]== 2) {
+      $scope.goal_retirement_2 = true;
+    }else if($scope.dates[x]== -20){
+      $scope.goal_retirement_2021 = false; 
+    }else if($scope.dates[x]== -10){
+      $scope.goal_involve_2018 = false; 
     }
   }
   
@@ -51,22 +55,23 @@ $(document).ready(function(e) {
 
   });
   
+  /* Círculo hoja */
   $('.goal_retirement').click(function(){
     console.log('goal click');
     $('body').fadeTo('ease', 0.3, function()
     {
-      $(this).css('background-image', 'url(https://wallpaperaccess.com/full/2828916.jpg)'); /* Foto Amenaza Fantasma */
+      $(this).css('background-image', 'url(https://wallpaperaccess.com/full/2828916.jpg)');
     }).fadeTo('slow', 1);
-
   });  
   
+
+  /* Círculo Gorro graduado */
   $('.goal_involve').click(function(){
     console.log('goal click');
     $('body').fadeTo('ease', 0.3, function()
     {
-      $(this).css('background-image', 'url(https://wallpaperaccess.com/full/2828902.jpg)'); /* Foto Clon */
+      $(this).css('background-image', 'url(https://wallpaperaccess.com/full/2828902.jpg)'); 
     }).fadeTo('slow', 1);
-
   });
   
 

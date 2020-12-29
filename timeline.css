@@ -106,7 +106,7 @@ p.focus::after{
 }
 
 .goal_wrap.active{
-  top: -160px;
+  top: -300px;
   width: 80px;
   height: 80px;
   line-height: 80px;
@@ -114,6 +114,27 @@ p.focus::after{
   font-size: 40px;
   cursor: pointer;
 }
+
+.goal_involve.active{
+  top: -500px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  margin-left: -40px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.goal_involve{
+  top: -400px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  margin-left: -40px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
 
 .bounce {
   animation: bounce 1s .5s;
