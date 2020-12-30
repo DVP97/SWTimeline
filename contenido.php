@@ -34,7 +34,7 @@ require('db.php');
         <!--Columna Portada-->
         <div class="row no-gutters">
             <div class="col">
-                <img src="media/Fulcrum.png" alt="icon">
+                <img src="media/Fulcrum.png" alt="icon" style="height:80vh">
             </div> 
             
             <!--Columna Informacion-->
@@ -56,7 +56,7 @@ require('db.php');
                         <h3 style="color:azure; font-size:20px; text-align:justify"><?php echo $row["Info"]; ?></h3>
                     </div>
                     <div class="col-md-6">
-                        Insertar Trailer 
+                    <iframe src="<?php echo $row["trailer"]; ?>" style="width:50vh"></iframe> 
                     </div>
                 </div>
             </div>
