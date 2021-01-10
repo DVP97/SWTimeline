@@ -1,6 +1,6 @@
 @font-face{
     font-family: "CustomJedi";
-    src: url('Starjedi.otf') format('opentype');
+    src: url("../css/Starjedi.otf") format("opentype");
   }
   
   .title {
