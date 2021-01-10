@@ -18,16 +18,6 @@ $con->set_charset('utf8');
         <link rel="icon" type="image/png" href="media/Fulcrum.png">
     </head>
     <body background="media/background.jpg">
-        <nav class="navbar navbar-expand-sm navbar-dark">
-            <a class="navbar-brand" href="index.html"><img src="media/Fulcrum.png" alt="icon" height="50">Star Wars Saga Timeline</a>
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu"><span class="navbar-toggler-icon"></span></button>
-            <div id="navbarMenu" class="collapse navbar-collapse">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Register.html">Register</a></li>
-                </ul>
-            </div>
-        </nav>
         <?php
         //falta crear constructor sentencia
         $sel_query="SELECT * FROM  Contenido WHERE IDcontenido = 1;";

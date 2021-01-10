@@ -48,3 +48,4 @@ $('#btnCW').click(function(){
         }
     });
 });
+//implementar loader para volver al index con el logo
