@@ -4,7 +4,7 @@ app.controller('HomeController', function($scope) {
 
   $scope.goal_title = "Cronología de Star Wars";
   
-  $scope.dates = [0,0,2,3,4,0,6,7,8]; /* Años respecto BBY, creo que no deja poner letras */
+  $scope.dates = [0,1,2,3,4,5,6,7,8]; /* Años respecto BBY, creo que no deja poner letras */
   
   $scope.goal_real_estate = false;
   
@@ -12,7 +12,7 @@ app.controller('HomeController', function($scope) {
   for (x in $scope.dates) {
     if($scope.dates[x]== 0){
       $scope.goal_real_estate_0 = true;
-      $scope.goal_retirement_0 = true;
+      $scope.goal_retirement_0 = false;
       $scope.goal_involve_0 = true;
     } else if($scope.dates[x]== 2) {
       $scope.goal_retirement_2 = true;
@@ -50,9 +50,9 @@ $(document).ready(function(e) {
     console.log('goal click');
     $('body').fadeTo('ease', 0.3, function()
     {
-      $(this).css('background-image', 'url(https://i.pinimg.com/originals/e1/8e/c6/e18ec65183a8a6334cce5906fb5ba487.jpg)');
+      /*$(this).css('background-image', 'url(https://i.pinimg.com/originals/e1/8e/c6/e18ec65183a8a6334cce5906fb5ba487.jpg)'); */
+      $(this).css('background-image', selectURL());
     }).fadeTo('slow', 1);
-
   });
   
   /* Círculo hoja */
@@ -73,7 +73,4 @@ $(document).ready(function(e) {
       $(this).css('background-image', 'url(https://wallpaperaccess.com/full/2828902.jpg)'); 
     }).fadeTo('slow', 1);
   });
-  
-
 });
-

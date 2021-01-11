@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es" >
+
+<head>
+	<meta charset="UTF-8">
+	<title> FULCRUM - Antigua República </title>
+	
+	<!-- Hojas de estilo -->
+	<!-- De aquí salen los simbolitos de los círculos (hoja, gorro, casa) -->
+	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css'>
+	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+	<link rel="stylesheet" href="timeline.css">
+	
+	<!-- JavaScript -->
+	<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+	<script src="kotor_timeline.js"></script>
+	
+	
+</head>
+
+<body>
+	
+	<div class="structure" ng-app="app" ng-controller="HomeController">
+		
+		<div class="preloaderimg">
+			<img src="media/background.jpg" alt="Background" style="display: none;"/>
+		</div>
+		
+		<div class="timeline"></div>
+		
+		<div class="timeline">  
+			<div ng-repeat="date in dates track by $index" class="date date-{{$index}}">
+								
+				<!-- Evento en el timeline: Videojuego (KOTOR) -->
+				<div class="goal_wrap videojuego" ng-show="videojuego_{{date}}">
+					<i class="fa fa-gamepad" style="color: #FFE81F" aria-hidden="true"></i>
+				</div>
+
+				<!-- Evento en el timeline: Videojuego 2 (KOTOR 2) -->
+				<div class="goal_wrap videojuego2" ng-show="videojuego2_{{date}}">
+					<i class="fa fa-gamepad" style="color: #FFE81F" aria-hidden="true"></i>
+				</div>
+
+				<p class="focus">
+					<a href="#">{{date}}</a>
+				</p>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>{{goal_title}}</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
