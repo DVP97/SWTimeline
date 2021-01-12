@@ -15,7 +15,7 @@
 	<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
-	<script src="kotor_timeline.js"></script>
+	<script src="scripts/kotor_timeline.js"></script>
 	
 	
 </head>
@@ -27,8 +27,11 @@
 		<div class="preloaderimg">
 			<img src="media/background.jpg" alt="Background" style="display: none;"/>
 		</div>
-		
-		<div class="timeline"></div>
+
+		<!-- Pruebas logo Old Republic -->
+		<div class="timeline">
+			<img src="media/Fulcrum.png" alt="Logo The Old Republic">
+		</div>
 		
 		<div class="timeline">  
 			<div ng-repeat="date in dates track by $index" class="date date-{{$index}}">

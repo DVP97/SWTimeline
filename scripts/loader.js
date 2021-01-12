@@ -1,7 +1,7 @@
 $('#btnOldRep').click(function(){
     var wait = 1000;
     $.ajax({
-        url: "contenido.php",
+        url: "kotor_timeline.html",
         beforeSend: function(){
             $('#vista').text("Cargando...");
         },
@@ -18,7 +18,7 @@ $('#btnOldRep').click(function(){
 $('#btnGalactRep').click(function(){
     var wait = 1000;
     $.ajax({
-        url: "contenido.php",
+        url: "republic_timeline.html",
         beforeSend: function(){
             $('#vista').text("Cargando...");
         },
