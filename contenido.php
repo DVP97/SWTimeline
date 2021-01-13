@@ -36,7 +36,7 @@ $con->set_charset('utf8');
                 <div class="col">
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-9">
-                            <h1 class="title" style="color:#FFE81F";><?php echo utf8_decode($row["Name"]); ?></h1>
+                            <h1 class="title" style="color:#FFE81F";><?php echo $row["Name"]; ?></h1>
                         </div>
                     </div>
                     <div class="row">

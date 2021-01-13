@@ -49,3 +49,9 @@ $('#btnCW').click(function(){
     });
 });
 //implementar loader para volver al index con el logo
+/* Posible implementación
+<input type=
+"button" onclick=
+"history.back()"
+value="Volver" />
+*/
