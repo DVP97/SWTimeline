@@ -26,7 +26,10 @@ $result = mysqli_query($con,$sel_query);
 
 	<body background="media/background.jpg">
 		<center>
-
+		<div class="panel panel-default">
+				<div class="panel-heading">
+                    <h3 class="panel-title">La Antigua República</h3>
+                </div>
 				<div class="timeline">
 					<div class="timeline__wrap">
 						<div class="timeline__items">
@@ -46,6 +49,7 @@ $result = mysqli_query($con,$sel_query);
 						</div>
 					</div>
 				</div>
+		</div>
 
 		</center>
 	</body>
