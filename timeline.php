@@ -28,14 +28,15 @@ $result = mysqli_query($con,$sel_query);
 		<center>
 
 				<div class="timeline">
-					<div class="timeline_wrap">
-						<div class="timeline_items">
+					<div class="timeline__wrap">
+						<div class="timeline__items">
 							<?php
 							foreach($result as $row){
 							?>
-								<div class="timeline_item">
-									<div class="timeline_content">
+								<div class="timeline__item">
+									<div class="timeline__content">
 									<h1><?php echo $row["Name"]; ?></h1>
+									<h2> <?php echo $row["Date"]; ?></h2>
 									<p><?php echo $row["Info"]; ?></p>
 									</div>
 								</div>
