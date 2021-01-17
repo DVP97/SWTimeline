@@ -1,6 +1,7 @@
 <?php
 require('db.php');
 $con->set_charset('utf8');
+session_start();
 ?>
 <!DOCTYPE html>
 <html>

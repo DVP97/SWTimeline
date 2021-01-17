@@ -1,6 +1,7 @@
 <?php
 require('db.php');
 $con->set_charset('utf8');
+session_start();
 ?>
 <?php
 //falta crear constructor sentencia
@@ -31,11 +32,11 @@ $result = mysqli_query($con,$sel_query);
     <body background="media/background.jpg">
 
         <nav class="navbar navbar-expand-sm navbar-dark">
-            <a class="navbar-brand" href="index.html"><img src="media/Fulcrum.png" alt="icon" height="50">Star Wars Saga Timeline</a>
+            <a class="navbar-brand" href="index.php"><img src="media/Fulcrum.png" alt="icon" height="50">Star Wars Saga Timeline</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu"><span class="navbar-toggler-icon"></span></button>
             <div id="navbarMenu" class="collapse navbar-collapse">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">Log out</a></li>
+                    <li class="nav-item"><a class="nav-link" href="logout.php">Log out</a></li>
                 </ul>
             </div>
         </nav>
