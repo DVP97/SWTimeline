@@ -1,0 +1,17 @@
+//crear tabla lista n-n
+
+CREATE TABLE IF NOT EXISTS users_Contenido (
+ID_Contenido INTEGER,
+ID_user INTEGER,
+PRIMARY KEY(ID_Contenido,ID_user),
+FOREIGN KEY(ID_Contenido) REFERENCES Contenido(IDcontenido),
+FOREIGN KEY(ID_user) REFERENCES users(IDuser)
+);
+
+//consulta mostrar listado contenidos de usuario 1
+
+SELECT Contenido.Name
+FROM users_Contenido 
+JOIN Contenido ON users_Contenido.ID_Contenido = Contenido.IDcontenido
+JOIN users ON users_Contenido.ID_user = users.IDuser
+WHERE users.ID_user = 1
