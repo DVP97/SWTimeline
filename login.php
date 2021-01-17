@@ -32,7 +32,7 @@ and password='".md5($password)."'";
 	$rows = mysqli_num_rows($result);
         if($rows==1){
 		
-	    $username=$_POST['username'];
+	    $_SESSION['username'] = $username;
             // Redirect user to index.php
 	    header("Location: index.php");
          }else{
