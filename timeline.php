@@ -9,7 +9,7 @@ $result = mysqli_query($con,$sel_query);
 <html lang="es" >
 	<head>
 		<meta charset="UTF-8">
-		<title> Timeline Old Republic </title>
+		<title> Línea de tiempo </title>
 		
 		<!-- Hojas de estilo -->
 		<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css'>
@@ -26,7 +26,7 @@ $result = mysqli_query($con,$sel_query);
 		<center>
         <div class="panel panel-default">
 				<div class="panel-heading">
-                    <h3 class="panel-title">La Antigua República</h3>
+                    <h3 class="panel-title">Línea de tiempo </h3>
                 </div>
     
 				<div class="timeline">
