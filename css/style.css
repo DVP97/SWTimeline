@@ -39,6 +39,7 @@
         background-image: url("../media/btn_old_rep.png");
         background-size: cover;
         opacity: 100%;
+        text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
     }
     button.epoca2:hover{
         cursor: pointer;
