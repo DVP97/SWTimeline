@@ -11,21 +11,14 @@ $result = mysqli_query($con,$sel_query);
 		<meta charset="UTF-8">
 		<title> Timeline Old Republic </title>
 		
-		<!-- Hojas de estilo 
+		<!-- Hojas de estilo -->
 		<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css'>
-		<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-        <link rel="stylesheet" href="css/timeline.min.css"> 
-		
-		JavaScript 
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'></script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
-		<script src="scripts/timeline.js"></script> -->
-
-        <script src="scripts/jquery.js"></script>
-        <script src="scripts/timeline.min.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/timeline.min.css" />
+        <link rel="stylesheet" href="css/timeline.min.css" /> 
+		
+		<!-- JavaScript --> 
+		<script src="scripts/jquery.js"></script>
+        <script src="scripts/timeline.min.js"></script>		
 
 	</head>
 
