@@ -5,11 +5,11 @@ session_start();
 ?>
 <?php
 //falta crear constructor sentencia
-$sel_query="SELECT Contenido.Name
+$sel_query="SELECT Contenido.Name 
             FROM Contenido 
-            JOIN user_Contenido ON Contenido.IDcontenido = users_Contenido.ID_Contenido 
-            JOIN users ON users_Contenido.ID_user = users.IDuser
-            WHERE users.IDuser EQUALS 1";
+            JOIN users_Contenido ON Contenido.IDcontenido = users_Contenido.ID_Contenido
+            JOIN users ON users_Contenido.ID_user = users.IDuser 
+            WHERE users.IDuser=1;";
 $result = mysqli_query($con,$sel_query);
 ?>
 <!DOCTYPE html>
