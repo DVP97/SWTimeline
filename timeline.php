@@ -9,27 +9,33 @@ $result = mysqli_query($con,$sel_query);
 <html lang="es" >
 	<head>
 		<meta charset="UTF-8">
-		<title> Timeline Sequence V1 </title>
+		<title> Timeline Old Republic </title>
 		
-		<!-- Hojas de estilo -->
-		<!-- De aquí salen los simbolitos de los círculos (hoja, gorro, casa) -->
+		<!-- Hojas de estilo 
 		<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css'>
 		<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-		<link rel="stylesheet" href="css/timeline.min.css">
+        <link rel="stylesheet" href="css/timeline.min.css"> 
 		
-		<!-- JavaScript -->
+		JavaScript 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
-		<script src="scripts/timeline.js"></script>
+		<script src="scripts/timeline.js"></script> -->
+
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/timeline.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/timeline.min.css" />
+
 	</head>
 
-	<body background="media/background.jpg">
+	<body>
 		<center>
-		<div class="panel panel-default">
+        <div class="panel panel-default">
 				<div class="panel-heading">
                     <h3 class="panel-title">La Antigua República</h3>
                 </div>
+    
 				<div class="timeline">
 					<div class="timeline__wrap">
 						<div class="timeline__items">
@@ -39,7 +45,7 @@ $result = mysqli_query($con,$sel_query);
 								<div class="timeline__item">
 									<div class="timeline__content">
 									<h1><?php echo $row["Name"]; ?></h1>
-									<h2> <?php echo $row["Date"]; ?></h2>
+                                    <h2> <?php echo $row["Date"], ' ABY'; ?></h2>
 									<p><?php echo $row["Info"]; ?></p>
 									</div>
 								</div>
@@ -49,15 +55,17 @@ $result = mysqli_query($con,$sel_query);
 						</div>
 					</div>
 				</div>
-		</div>
+        </div>
 
 		</center>
 	</body>
-	<script>
-		$(document).ready(function()){
+	
+</html>
+
+<script>
+		$(document).ready(function(){
 			jQuery('.timeline').timeline({
-				mode: 'horizontal'
+				mode: 'horizontal', visibleItems: 2
 			});
 		});
-	</script>
-</html>
+</script>
