@@ -33,8 +33,8 @@
     z-index: 2;
 }
 .timeline__item:after {
-    background-color: #fff;
-    border: 4px solid #ddd;
+    background-color: #FFE81F;
+    border: 4px solid #FFE81F;
     border-radius: 50%;
     content: '';
     height: 20px;
@@ -134,11 +134,10 @@
     padding: 0 3.125rem;
     overflow: hidden;
     white-space: nowrap;
-    background-color: cornflowerblue;
-    /*background-image: url(media/background.jpg);*/
+    background-image: url(../media/background.jpg);
 }
 .timeline--horizontal .timeline-divider {
-    background-color: #ddd;
+    background-color: #FFE81F;
     display: block;
     height: 4px;
     left: 40px;
