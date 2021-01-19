@@ -8,7 +8,8 @@
     box-sizing: inherit;
 }
 .timeline:not(.timeline--horizontal):before {
-    background-color: #ddd;
+    /*background-color: #ddd;*/
+    background-image: url("media/background.jpg");
     bottom: 0;
     content: '';
     left: 50%;
@@ -133,6 +134,8 @@
     padding: 0 3.125rem;
     overflow: hidden;
     white-space: nowrap;
+    background-color: cornflowerblue;
+    /*background-image: url(media/background.jpg);*/
 }
 .timeline--horizontal .timeline-divider {
     background-color: #ddd;
