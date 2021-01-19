@@ -119,15 +119,15 @@
     font-size: 18px;
     font-weight: 700;
     margin: 0 0 .625rem;
+    color:#ccc;
 }
 .timeline__content p {
     font-size: 1.4375rem;
     line-height: 1.5;
     margin-bottom: 10px;
-    /*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333;*/
+    /*font-size: 14px;
+    line-height: 1.42857143;*/
+    color: #333;
 }
 .timeline--horizontal {
     font-size: 0;

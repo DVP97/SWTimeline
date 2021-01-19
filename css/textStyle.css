@@ -11,3 +11,19 @@
   .main-wrapper {
     height: 100vh;  
   }
+
+  .panel {
+    font-family: CustomJedi;
+    font-size: 16px;
+    color: cyan;
+  }
+  /* h1 {
+    font-family: CustomJedi;
+    font-size: 16px;
+    color: cyan;
+  }
+
+  h3 {
+    font-family: CustomJedi;
+    font-size: 14px;
+  }*/
