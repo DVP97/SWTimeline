@@ -175,7 +175,8 @@
 .timeline--horizontal .timeline__item .timeline__item__inner {
     display: table;
     height: 100%;
-    width: 100%}
+    width: 100%;
+}
 .timeline--horizontal .timeline__item .timeline__content__wrap {
     display: table-cell;
     margin: 0;
@@ -185,7 +186,7 @@
 .timeline--horizontal .timeline__item .timeline__content:before {
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-top: 12px solid #ccc;
+    border-top: 12px solid #ccc; /*Punta de la flecha*/
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
