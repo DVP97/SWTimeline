@@ -8,8 +8,7 @@
     box-sizing: inherit;
 }
 .timeline:not(.timeline--horizontal):before {
-    /*background-color: #ddd;*/
-    background-image: url("media/background.jpg");
+    background-color: #ddd;
     bottom: 0;
     content: '';
     left: 50%;
@@ -271,13 +270,13 @@
     left: 0;
 }
 .timeline-nav-button--prev:before {
-    background-image: url(../images/arrow-left.svg);
+    background-image: url(../media/arrow-left.svg);
 }
 .timeline-nav-button--next {
     right: 0;
 }
 .timeline-nav-button--next:before {
-    background-image: url(../images/arrow-right.svg);
+    background-image: url(../media/arrow-right.svg);
 }
 .timeline--mobile {
     padding: 0;

@@ -18,7 +18,7 @@ $('#btnOldRep').click(function(){
 $('#btnGalactRep').click(function(){
     var wait = 1000;
     $.ajax({
-        url: "timeline.php",
+        url: "horizontal_timeline.php",
         beforeSend: function(){
             $('#vista').text("Cargando...");
         },
