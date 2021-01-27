@@ -11,8 +11,8 @@
 </head>
 <body  background="media/background.jpg">
 <div class="container">
-    <nav class="navbar navbar-expand-sm navbar-dark">
-        <a class="navbar-brand" href="index.html"><img src="media/Fulcrum.png" alt="icon" height="50">Star Wars Saga Timeline</a>
+	<nav class="navbar navbar-expand-sm navbar-dark">
+    	<a class="navbar-brand" href="index.php"><img src="media/Fulcrum.png" alt="icon" height="50">Star Wars Saga Timeline</a>
     </nav>
 <?php
 require('db.php');

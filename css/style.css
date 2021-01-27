@@ -34,6 +34,7 @@
         opacity: 80%;
         /*min-width: 18vw;*/
     }
+    
     button.epoca1:hover{
         cursor: pointer;
         background-image: url("../media/btn_old_rep.png");

@@ -12,6 +12,7 @@ session_start();
         <!-- Bootstrap4 CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
         <!--textStyle CSS-->
         <link rel="stylesheet" href="css/textStyle.css">
         <!--Tab icon-->
@@ -39,26 +40,25 @@ session_start();
             </nav>
             <!--vista que se actualiza sin necesidad de cambiar de página-->
             <div class="container" id="vista">
-                <center>
-                    <h1 class="title" style="color: cyan;" >Próximamente, en una galaxia muy cercana...</h1>
-                </center>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-lg-4"><button class="btn-block epoca1" id="btnOldRep"><div class="text-center">Antigua República</div></button></div>
-                            <div class="col-12 col-lg-4"><button class="btn-block epoca2" id="btnGalactRep"><div class="text-center">República Galáctica</div></button></div>
-                            <div class="col-12 col-lg-4"><button class="btn-block epoca3" id="btnCW"><div class="text-center">Guerra Civil</div></button></div>
-                        </div>
+                <h1 class="title text-center" style="color: cyan;" >Próximamente, en una galaxia muy cercana...</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-4"><button class="btn-block epoca1" id="btnOldRep"><div class="text-center">Antigua República</div></button></div>
+                        <div class="col-12 col-lg-4"><button class="btn-block epoca2" id="btnGalactRep"><div class="text-center">República Galáctica</div></button></div>
+                        <div class="col-12 col-lg-4"><button class="btn-block epoca3" id="btnCW"><div class="text-center">Guerra Civil</div></button></div>
                     </div>
-                    <!--<div class="push"></div>-->
-                    <footer class="footer">
-                        <hr><br><center><div class="container"><span class="text-muted">Copyright disclaimer: all rights from the Star Wars franchise belong to Lucasfilm and associates.</span></div></center>
-                    </footer>
+                </div>
+                <div class="navbar navbar-default navbar-fixed-bottom">
+                    <div class="container"><p class="text-muted text-center">Copyright disclaimer: all rights from the Star Wars franchise belong to Lucasfilm and associates.</p></div>
+                </div>
             </div>
         </div>
+
         <!--Bootstrap4 JS-->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
         <!--loader JS-->
         <script src="scripts/loader.js"></script>
     </body>

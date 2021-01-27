@@ -7,14 +7,15 @@ session_start();
 <html>
     <head>
         <meta charset="UTF-8">
-        <!--Custom CSS-->
-        <link rel="stylesheet" href="css/style.css">
+        
         <title>SW - Timeline</title>
         <!-- Bootstrap4 CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
         <!--textStyle CSS-->
         <link rel="stylesheet" href="css/textStyle.css">
+        <!--Custom CSS-->
+        <link rel="stylesheet" href="css/style.css">
         <!--Tab icon-->
         <link rel="icon" type="image/png" href="media/Fulcrum.png">
     </head>
@@ -26,43 +27,62 @@ session_start();
         while($row = mysqli_fetch_assoc($result)) { 
         ?>
 
-        <div id="contenedor" class="container-fluid main-wrapper"
-            <!--Columna Portada-->
+        <div id="contenedor" class="container-fluid main-wrapper">
+            <!--Marco info contenido-->
             <div class="row no-gutters">
-                <div class="col-md-3 col-xs-2">
-                    <img src="media/Fulcrum.png" alt="icon" style="max-height:700px">
+                <!--Columna Portada-->
+                <div class="col-12 col-lg-6">
+                    <!--cambiar src por variable que incluya la ruta relativa a la portada-->
+                    <img src="media/Fulcrum.png" alt="icon" style="max-height:600px">
                 </div> 
                 
                 <!--Columna Informacion-->
-                <div class="col">
+                <div class="col-lg-6">
+                    <!--Campo título-->
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-9">
                             <h1 class="title" style="color:#FFE81F";><?php echo $row["Name"]; ?></h1>
                         </div>
                     </div>
+                    <!--Campo info-->
                     <div class="row">
                         <div class="col-xs-6 col-md-4">
-                            <h3 style="color:#FFE81F; font-size:20px; ">aurebesh translation</h3>
                             <h3 style="color:#fdfbec; font-size:15px; "><?php echo $row["Release"]; ?></h3>
-                            <h3 style="color:#fdfbec; font-size:15px; "><?php echo $row["Type"]; ?> - Plataformas </h3>
+                            <h3 style="color:#fdfbec; font-size:15px; "><?php echo $row["Type"]; ?> <!--Plataformas if $row["Type"]=Juego--> </h3>
                         </div>
                     </div>
+                    <!--Sinopsis-->
                     <div class="row">
                         <div class="col-xs-6">
                             <h3 style="color:azure; font-size:20px; text-align:justify"><?php echo $row["Info"]; ?></h3>
                         </div>
                     </div>
+                    
+                    
                     <div class="row">
+                        <!--Link trailer-->   
                         <div class="col-offset-1"><iframe src="<?php echo $row["trailer"]; ?>"></iframe></div>
+                         <!--Toogle boton manejar lista-->
+                         <div class="toggle btn btn-warning" data-toggle="toggle" role="button" style="width: 110px; height: 38px;">
+                            <input type="checkbox"checked data-toggle="toggle" data-on="Siguiendo" data-off=" " data-onstyle="warning" data-offstyle="info">
+                           
+                            <div class="toggle-group">
+                                <label class="btn btn-warning toggle-on">Siguiendo</label>
+                                <label class="btn btn-info toggle-off"></label>
+                                <span class="toggle-handle btn btn-light"></span>
+                            </div>
+                            
+                        </div>
                     </div>
+                    
                 </div>
-                
+                <!--Footer-->
+                <div class="navbar navbar-default navbar-fixed-bottom">
+                    <div class="container"><p class="text-muted text-center">Copyright disclaimer: all rights from the Star Wars franchise belong to Lucasfilm and associates.</p></div>
+                </div>
             </div>
         </div>
-        <div class="push"></div>
-        <footer class="footer">
-            <hr><br><center><div class="container"><span class="text-muted">Copyright disclaimer: all rights from the Star Wars franchise belong to Lucasfilm and associates.</span></div></center>
-        </footer>
+
         <?php }?>
 
         <!--Bootstrap4 JS-->
