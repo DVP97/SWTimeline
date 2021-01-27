@@ -29,30 +29,33 @@
         border: 2px solid #FFE81F;
         padding: 15px 100px;
         overflow: hidden;
-        width:15vw;
-        height: 35vw;
+        /*width:15vw;
+        height: 35vw;*/
         opacity: 80%;
-        min-width: 18vw;
+        /*min-width: 18vw;*/
     }
     button.epoca1:hover{
         cursor: pointer;
         background-image: url("../media/btn_old_rep.png");
         background-size: cover;
-        opacity: 100%;
-        text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+        border: 5px solid #FFE81F;
+        opacity: 80%;
+        /*text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;*/
     }
     button.epoca2:hover{
         cursor: pointer;
         background-image: url("../media/btn_rep.png");
         background-size: cover;
-        opacity: 100%;
+        opacity: 80%;
+        /*text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;*/
         
     }
     button.epoca3:hover{
         cursor: pointer;
         background-image: url("../media/btn_civil.png");
         background-size: cover;
-        opacity: 100%;
+        opacity: 80%;
+        /*text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;*/
     }
 
     /*button:before (attr data-hover)*/

@@ -1,6 +1,5 @@
 <?php
 //include auth.php file on all secure pages
-
 session_start();
 ?>
 <!DOCTYPE html>
@@ -45,12 +44,12 @@ session_start();
                 </center>
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-4"><button class="epoca1" id="btnOldRep">Antigua República</button></div>
-                            <div class="col-md-4"><button class="epoca2" id="btnGalactRep">República Galáctica</button></div>
-                            <div class="col-md-4"><button class="epoca3" id="btnCW">Guerra Civil</button></div>
+                            <div class="col-12 col-lg-4"><button class="btn-block epoca1" id="btnOldRep"><div class="text-center">Antigua República</div></button></div>
+                            <div class="col-12 col-lg-4"><button class="btn-block epoca2" id="btnGalactRep"><div class="text-center">República Galáctica</div></button></div>
+                            <div class="col-12 col-lg-4"><button class="btn-block epoca3" id="btnCW"><div class="text-center">Guerra Civil</div></button></div>
                         </div>
                     </div>
-                    <div class="push"></div>
+                    <!--<div class="push"></div>-->
                     <footer class="footer">
                         <hr><br><center><div class="container"><span class="text-muted">Copyright disclaimer: all rights from the Star Wars franchise belong to Lucasfilm and associates.</span></div></center>
                     </footer>
