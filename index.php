@@ -27,11 +27,11 @@ session_start();
                 <a class="navbar-brand" href="index.php"><img src="media/Fulcrum.png" alt="icon" height="50">Star Wars Saga Timeline</a>
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu"><span class="navbar-toggler-icon"></span></button>
                 <div id="navbarMenu" class="collapse navbar-collapse">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ml-auto">
                     <?php if(isset($_SESSION["username"])):?>
                         <!--mostrar icono usuario con link a profile.php y botón de Logout-->
                         <li class="nav-item"><img src="media/user_def.jpg" width="60vw" ></img></li>
-                        <li class="nav-item"><br><?php echo $_SESSION['username']; ?></li>
+                        <li class="nav-item"><br><a class="nav-link" href="profile.php"><?php echo $_SESSION['username']; ?></a></li>
                         <li class="nav-item"><br><a class="nav-link" href="logout.php">Logout</a></li>
                     <?php else:?>
                         <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>

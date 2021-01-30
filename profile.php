@@ -48,7 +48,7 @@ $result = mysqli_query($con,$sel_query);
                 </div>
                 <div class="col-md-9">
                     <!--Nombre de usuario-->
-                    <h1>CT-5555</h1>
+                    <h1><?php echo $_SESSION['username']; ?></h1>
                 </div>
             </div>
             <hr>

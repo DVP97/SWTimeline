@@ -43,7 +43,6 @@ $result = mysqli_query($con,$sel_query);
                                     <div class="timeline__content">
                                             <h1><?php echo $row["Name"]; ?></h1>
 											<h2> <?php echo $row["Date"], ' ABY'; ?></h2>
-											<p><?php echo $row["Info"]; ?></p>
                                     </div>
                                 </div>
                             <?php
