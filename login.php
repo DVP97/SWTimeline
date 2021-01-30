@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="css/style.css" />
 <!--textStyle CSS-->
 <link rel="stylesheet" href="css/textStyle.css">
+<link rel="stylesheet" href="css/timeline_custom_style.css">
 <!--Tab icon-->
 <link rel="icon" type="image/png" href="media/Fulcrum.png">
 </head>

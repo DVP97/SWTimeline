@@ -79,7 +79,7 @@ p {
 
 /* Con esto hay que jugar */
 .timeline__item .timeline__item__inner {
-    height: 57%;
+    height: 30%;
     width: 189%;
 }
 
@@ -100,4 +100,15 @@ p {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     top: 97%;
+}
+
+/* Para el botón de login */
+input {
+    color: black;
+}
+
+/* En profile.php, para separar número del texto */
+ol li::before {
+    margin-left: -45px;
+    text-align: center;
 }
