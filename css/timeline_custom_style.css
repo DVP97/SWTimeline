@@ -1,5 +1,4 @@
-/* Esta hoja de estilos solo hará falta para modificar los estilos propios de Bootstrap*/
-/* El resto de cambios se hacen directamente sobre timeline.min.css*/
+/* Esta hoja de estilos sobreescribe otros estilos para que la línea de tiempo se vea bien en el index */
 
 /* Tipo de letra Jedi */
 @font-face{
@@ -8,17 +7,97 @@
 }
 
 /* Título línea de tiempo (h3) */
-.panel-title {
+h3.panel-title {
     font-family: CustomJedi;
-    font-size: 20px;
+    font-size: 28px;
     color:#FFE81F;
+    -webkit-text-stroke: 1px black;
+    text-align: center;
+}
+
+p {
+    color: #FFE81F;
 }
 
 /* Tamaños de los paneles y demás */
-/*.panel-default {
+.panel-body {
+    padding: 15px;
+    color: transparent;
+    background-image: url("../media/background.jpg");
+    width: 100%;
+    height: 100%;
+}
 
-}*/
+.panel-default>.panel-heading { 
+    background-image: url("../media/background.jpg");
+}
 
-.panel-heading {
-    background-image: ("../media/background.jpg");
+.timeline--horizontal { 
+    padding-top: 15px;
+    width: 100%;
+    width: 100%;
+}
+
+.timeline__content {
+    background-color: transparent;
+    border: 2px solid #FFE81F;
+    border-radius: 10px;
+    color: #FFE81F; /* Título y fecha */
+    display: block;
+    padding: 1.25rem;
+    position: relative;
+}
+
+
+
+.timeline-nav-button {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    outline: 0;
+    position: absolute;
+    text-indent: -9999px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+    width: 40px;
+    z-index: 10;
+}
+
+.timeline-nav-button timeline-nav-button--next {
+    width: 10px;
+    height: 10px;
+}
+
+/* Con esto hay que jugar */
+.timeline__item .timeline__item__inner {
+    height: 57%;
+    width: 189%;
+}
+
+/* Flecha de cada evento */
+.timeline--horizontal .timeline__item .timeline__content:before {
+    color: #FFE81F;
+}
+
+.timeline__item timeline__item--top {
+    width: 595px;
+    height: 420px;
+}
+
+.timeline--horizontal .timeline__item:after {
+    left: 50%;
+    right: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    top: 97%;
 }
