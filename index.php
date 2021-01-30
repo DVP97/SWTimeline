@@ -17,6 +17,8 @@ session_start();
         <link rel="stylesheet" href="css/textStyle.css">
         <!--Tab icon-->
         <link rel="icon" type="image/png" href="media/Fulcrum.png">
+        <!-- CSS que sobreescribe los 'por defecto' para que se vea el timeline bien -->
+        <link rel="stylesheet" href="css/timeline_custom_style.css">
     </head>
 
     <body background="media/background.jpg">

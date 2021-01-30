@@ -1,0 +1,24 @@
+/* Esta hoja de estilos solo hará falta para modificar los estilos propios de Bootstrap*/
+/* El resto de cambios se hacen directamente sobre timeline.min.css*/
+
+/* Tipo de letra Jedi */
+@font-face{
+    font-family: "CustomJedi";
+    src: url("Starjedi.otf") format("opentype"); /* Check ruta */
+}
+
+/* Título línea de tiempo (h3) */
+.panel-title {
+    font-family: CustomJedi;
+    font-size: 20px;
+    color:#FFE81F;
+}
+
+/* Tamaños de los paneles y demás */
+/*.panel-default {
+
+}*/
+
+.panel-heading {
+    background-image: ("../media/background.jpg");
+}

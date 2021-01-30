@@ -29,11 +29,9 @@ $result = mysqli_query($con,$sel_query);
 			<br />
 			<div class="panel panel-default">
 				<div class="panel-heading">
-                    <h3 class="panel-title">Our Journey</h3>
+                    <h3 class="panel-title">Línea de tiempo</h3>
                 </div>
-                <div class="panel-body">
-                	<button class="timeline-nav-button timeline-nav-button--prev" disabled="" style="top: 882px;">Previous</button>
-					<button class="timeline-nav-button timeline-nav-button--next" style="top: 882px;">Next</button>
+                <div class="panel-body">                	
                     <div class="timeline">
                         <div class="timeline__wrap">
                             <div class="timeline__items">
