@@ -1,7 +1,12 @@
+console.log("loader cargado");
 $('#btnOldRep').click(function(){
+    console.log("timeline 1");
     var wait = 1000;
     $.ajax({
-        url: "timeline.php",
+        url: "horizontal_timeline.php",
+        type:"post",
+        dataType:"JSON",
+        data:{epoca:1},
         beforeSend: function(){
             $('#vista').text("Cargando...");
         },
@@ -16,9 +21,13 @@ $('#btnOldRep').click(function(){
 });
 
 $('#btnGalactRep').click(function(){
+    console.log("timeline 2");
     var wait = 1000;
     $.ajax({
         url: "horizontal_timeline.php",
+        type:"post",
+        dataType:"JSON",
+        data:{epoca:2},
         beforeSend: function(){
             $('#vista').text("Cargando...");
         },
@@ -33,9 +42,13 @@ $('#btnGalactRep').click(function(){
 });
 
 $('#btnCW').click(function(){
+    console.log("timeline 3");
     var wait = 1000;
     $.ajax({
-        url: "contenido.php",
+        url: "horizontal_timeline.php",
+        type:"post",
+        dataType:"JSON",
+        data:{epoca:3},
         beforeSend: function(){
             $('#vista').text("Cargando...");
         },
@@ -47,6 +60,8 @@ $('#btnCW').click(function(){
             );
         }
     });
+
+
 });
 //implementar loader para volver al index con el logo
 /* Posible implementación

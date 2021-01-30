@@ -45,9 +45,9 @@ session_start();
                 <h1 class="title text-center" style="color: cyan;" >Próximamente, en una galaxia muy cercana...</h1>
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-lg-4"><button class="btn-block epoca1" id="btnOldRep"><div class="text-center">Antigua República</div></button></div>
-                        <div class="col-12 col-lg-4"><button class="btn-block epoca2" id="btnGalactRep"><div class="text-center">República Galáctica</div></button></div>
-                        <div class="col-12 col-lg-4"><button class="btn-block epoca3" id="btnCW"><div class="text-center">Guerra Civil</div></button></div>
+                            <div class="col-12 col-lg-4"><button class="btn-block epoca1" id="btnOldRep" onclick="btnOldRep()"><div class="text-center">Antigua República</div></button></div>
+                            <div class="col-12 col-lg-4"><button class="btn-block epoca2" id="btnGalactRep" onclick="btnGalactRep()"><div class="text-center">República Galáctica</div></button></div>
+                            <div class="col-12 col-lg-4"><button class="btn-block epoca3" id="btnCW" onclick="btnCW()"><div class="text-center">Guerra Civil</div></button></div> 
                     </div>
                 </div>
                 <div class="navbar navbar-default navbar-fixed-bottom">
@@ -55,14 +55,70 @@ session_start();
                 </div>
             </div>
         </div>
+        <script>
+            var wait = 1000;
+            function btnOldRep(){
+                
+                $.ajax({
+                    url: "horizontal_timeline.php",
+                    beforeSend: function(){
+                        $('#vista').text("Cargando...");
+                    },
+                    success : function(data){
+                        setTimeout(function(){
+                            $('#vista').html(data);
+                        },
+                        wait
+                        );
+                    }
+                });
+                
+            }
 
+            function btnGalactRep(){     
+                
+                $.ajax({
+                    url: "horizontal_timeline.php",
+                    beforeSend: function(){
+                        $('#vista').text("Cargando...");
+                    },
+                    success : function(data){
+                        setTimeout(function(){
+                            $('#vista').html(data);
+                        },
+                        wait
+                        );
+                    }
+                });
+            };
+
+            function btnCW(){
+                
+                
+                $.ajax({
+                    url: "horizontal_timeline.php",
+                    beforeSend: function(){
+                        $('#vista').text("Cargando...");
+                    },
+                    success : function(data){
+                        setTimeout(function(){
+                            $('#vista').html(data);
+                        },
+                        wait
+                        );
+                    }
+                });
+            }
+            
+        </script>
+        <?php  $_SESSION['epoca']=3;?>
         <!--Bootstrap4 JS-->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
         <!--loader JS-->
-        <script src="scripts/loader.js"></script>
+        <!--<script src="scripts/loader.js"></script>-->
     </body>
 
 </html>

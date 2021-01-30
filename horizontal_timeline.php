@@ -1,8 +1,12 @@
 <?php
 require('db.php');
 $con->set_charset('utf8');
+session_start();
 //falta crear constructor sentencia
-$sel_query="SELECT * FROM  Contenido WHERE IDepoca = 1;";
+echo ("estas en timeline wueno");
+$ep=$_SESSION['epoca'];
+echo $ep;
+$sel_query="SELECT * FROM  Contenido WHERE IDepoca = $ep;";
 $result = mysqli_query($con,$sel_query);
 ?>
 
@@ -23,7 +27,8 @@ $result = mysqli_query($con,$sel_query);
         <script src="scripts/timeline.min.js"></script>		
 		
     </head>  
-    <body>  
+    <body>
+      
         <div class="container">
 			<br />
 			<br />
