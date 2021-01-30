@@ -1,12 +1,8 @@
-console.log("loader cargado");
 $('#btnOldRep').click(function(){
-    console.log("timeline 1");
+    sessionStorage.setItem("epoca", 1);
     var wait = 1000;
     $.ajax({
-        url: "horizontal_timeline.php",
-        type:"post",
-        dataType:"JSON",
-        data:{epoca:1},
+        url: "horizontal_timeline1.php",
         beforeSend: function(){
             $('#vista').text("Cargando...");
         },
@@ -21,13 +17,9 @@ $('#btnOldRep').click(function(){
 });
 
 $('#btnGalactRep').click(function(){
-    console.log("timeline 2");
     var wait = 1000;
     $.ajax({
-        url: "horizontal_timeline.php",
-        type:"post",
-        dataType:"JSON",
-        data:{epoca:2},
+        url: "horizontal_timeline2.php",
         beforeSend: function(){
             $('#vista').text("Cargando...");
         },
@@ -45,10 +37,7 @@ $('#btnCW').click(function(){
     console.log("timeline 3");
     var wait = 1000;
     $.ajax({
-        url: "horizontal_timeline.php",
-        type:"post",
-        dataType:"JSON",
-        data:{epoca:3},
+        url: "horizontal_timeline3.php",
         beforeSend: function(){
             $('#vista').text("Cargando...");
         },

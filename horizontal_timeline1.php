@@ -2,11 +2,7 @@
 require('db.php');
 $con->set_charset('utf8');
 session_start();
-//falta crear constructor sentencia
-echo ("estas en timeline wueno");
-$ep=$_SESSION['epoca'];
-echo $ep;
-$sel_query="SELECT * FROM  Contenido WHERE IDepoca = $ep;";
+$sel_query="SELECT * FROM  Contenido WHERE IDepoca = 1;";
 $result = mysqli_query($con,$sel_query);
 ?>
 
@@ -20,12 +16,7 @@ $result = mysqli_query($con,$sel_query);
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/timeline.min.css" />
 		<link rel="stylesheet" href="css/timeline_custom_style.css" /> 
-		
-		<!-- JavaScript --> 
-		<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
-        <script src="scripts/jquery.js"></script>
-        <script src="scripts/timeline.min.js"></script>		
-		
+			
     </head>  
     <body>
       
@@ -47,7 +38,7 @@ $result = mysqli_query($con,$sel_query);
                             	<div class="timeline__item">
                                     <div class="timeline__content">
                                             <h1><?php echo $row["Name"]; ?></h1>
-											<h2> <?php echo $row["Date"], ' ABY'; ?></h2>
+											<h2> <?php echo $row["Date"]; ?></h2>
                                     </div>
                                 </div>
                             <?php
@@ -59,7 +50,11 @@ $result = mysqli_query($con,$sel_query);
                 </div>
 			</div>
 		</div>
-    </body>  
+    </body>
+    		<!-- JavaScript --> 
+		<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/timeline.min.js"></script>	
 </html>
 
 <script>
