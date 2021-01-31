@@ -5,12 +5,19 @@ $con->set_charset('utf8');
 session_start();
 ?>
 <?php
-//falta crear constructor sentencia
+
+$user=$_SESSION['username'];
+$sel_query2="SELECT IDuser FROM  users WHERE username='$user';";
+
+$userID = mysqli_query($con,$sel_query2) or die ( mysqli_error());
+$row= mysqli_fetch_assoc($userID);
+$asdf = $row['IDuser'];
+
 $sel_query="SELECT * 
             FROM Contenido 
             JOIN users_Contenido ON Contenido.IDcontenido = users_Contenido.ID_Contenido
             JOIN users ON users_Contenido.ID_user = users.IDuser 
-            WHERE users.IDuser=1;";
+            WHERE users.IDuser=$asdf;";
 $result = mysqli_query($con,$sel_query);
 ?>
 <!DOCTYPE html>
