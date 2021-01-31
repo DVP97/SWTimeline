@@ -45,7 +45,7 @@ and password='".md5($password)."'";
 ?>
 <center>
 <div class="form">
-<h1 class="title" style="color:#FFE81F">Log In</h1>
+<h1 class="title" style="color:#FFE81F">log in</h1>
 <form action="" method="post" name="login">
 <input type="text" name="username" placeholder="Username" required />
 <input type="password" name="password" placeholder="Password" required />
