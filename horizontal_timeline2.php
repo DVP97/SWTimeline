@@ -38,7 +38,7 @@ $result = mysqli_query($con,$sel_query);
                             	<div class="timeline__item">
                                     <div class="timeline__content">
                                         <a href="contenido.php?actual=<?php echo $row['IDcontenido']; ?>">
-                                        <h1><?php echo $row["Name"]; ?></h1>
+                                        <h1 class="title" style="color:#FFE81F"><?php echo $row["Name"]; ?></h1>
                                         </a>
                                         <h2> <?php echo $row["Date"]; ?></h2>
                                     </div>
@@ -53,7 +53,7 @@ $result = mysqli_query($con,$sel_query);
 			</div>
 		</div>
     </body>
-    		<!-- JavaScript --> 
+    	<!-- JavaScript --> 
 		<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
         <script src="scripts/jquery.js"></script>
         <script src="scripts/timeline.min.js"></script>	

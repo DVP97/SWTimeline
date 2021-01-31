@@ -59,7 +59,7 @@ while($row = mysqli_fetch_assoc($result)) {
                     <!--Campo título-->
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-9">
-                            <h1 class="title" style="color:#FFE81F";><?php echo $row["Name"]; ?></h1>
+                            <h1 class="title" style="color:#FFE81F"><?php echo $row["Name"]; ?></h1>
                         </div>
                     </div>
                     <!--Campo info-->
