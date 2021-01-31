@@ -1,5 +1,6 @@
 <?php
 require('db.php');
+require('auth.php');
 $con->set_charset('utf8');
 session_start();
 ?>
