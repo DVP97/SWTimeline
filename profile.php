@@ -65,6 +65,7 @@ $result = mysqli_query($con,$sel_query);
                         foreach($result as $row){
                         ?>
                         <li><?php echo $row["Name"]; ?></li>
+                        <a href="delete.php?id=<?php echo $row["IDcontenido"]; ?>">Eliminar</a>
                         <?php }?>
                     </ol>
                 </div>

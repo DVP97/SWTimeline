@@ -2,10 +2,14 @@
 require('db.php');
 $con->set_charset('utf8');
 session_start();
-$asdf = $_GET["actual"];
-//falta crear constructor sentencia
-$sel_query="SELECT * FROM  Contenido WHERE IDcontenido = $asdf;";
+//get contenido actual
+$contID = $_GET["actual"];
+$sel_query="SELECT * FROM  Contenido WHERE IDcontenido = $contID;";
 $result = mysqli_query($con,$sel_query);
+
+
+
+$insert_query="INSERT INTO users_Contenido(ID_Contenido,ID_user) VALUES ($contID,$userID);";
 while($row = mysqli_fetch_assoc($result)) { 
 
 ?>
@@ -81,18 +85,8 @@ while($row = mysqli_fetch_assoc($result)) {
                         <!--Link trailer-->   
                         <div class="col-offset-1"><iframe src="<?php echo $row["trailer"]; ?>"></iframe></div>
                          <!--Toogle boton manejar lista-->
-                         <div class="toggle btn btn-warning" data-toggle="toggle" role="button" style="width: 110px; height: 38px;">
-                            <input type="checkbox"checked data-toggle="toggle" data-on="Siguiendo" data-off=" " data-onstyle="warning" data-offstyle="info">
-                           
-                            <div class="toggle-group">
-                                <label class="btn btn-warning toggle-on">Siguiendo</label>
-                                <label class="btn btn-info toggle-off"></label>
-                                <span class="toggle-handle btn btn-light"></span>
-                            </div>
-                            
-                        </div>
+                         
                     </div>
-                    
                 </div>
                 <!--Footer-->
                 <div class="navbar navbar-default navbar-fixed-bottom">
