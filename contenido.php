@@ -2,6 +2,12 @@
 require('db.php');
 $con->set_charset('utf8');
 session_start();
+$asdf = $_GET["actual"];
+//falta crear constructor sentencia
+$sel_query="SELECT * FROM  Contenido WHERE IDcontenido = $asdf;";
+$result = mysqli_query($con,$sel_query);
+while($row = mysqli_fetch_assoc($result)) { 
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,14 +26,26 @@ session_start();
         <link rel="icon" type="image/png" href="media/Fulcrum.png">
     </head>
     <body background="media/background.jpg">
-        <?php
-        //falta crear constructor sentencia
-        $sel_query="SELECT * FROM  Contenido WHERE IDcontenido = 1;";
-        $result = mysqli_query($con,$sel_query);
-        while($row = mysqli_fetch_assoc($result)) { 
-        ?>
+    
 
         <div id="contenedor" class="container-fluid main-wrapper">
+            <nav class="navbar navbar-expand-sm navbar-dark">
+                <a class="navbar-brand" href="index.php"><img src="media/Fulcrum.png" alt="icon" height="50">Star Wars Saga Timeline</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu"><span class="navbar-toggler-icon"></span></button>
+                <div id="navbarMenu" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                    <?php if(isset($_SESSION["username"])):?>
+                        <!--mostrar icono usuario con link a profile.php y botón de Logout-->
+                        <li class="nav-item"><img src="media/user_def.jpg" width="60vw" ></img></li>
+                        <li class="nav-item"><br><a class="nav-link" href="profile.php"><?php echo $_SESSION['username']; ?></a></li>
+                        <li class="nav-item"><br><a class="nav-link" href="logout.php">Logout</a></li>
+                    <?php else:?>
+                        <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+                    <?php endif;?>
+                    </ul>
+                </div>
+            </nav>
             <!--Marco info contenido-->
             <div class="row no-gutters">
                 <!--Columna Portada-->

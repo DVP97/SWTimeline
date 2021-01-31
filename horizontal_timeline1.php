@@ -37,8 +37,10 @@ $result = mysqli_query($con,$sel_query);
                             ?>
                             	<div class="timeline__item">
                                     <div class="timeline__content">
-                                            <h1><?php echo $row["Name"]; ?></h1>
-											<h2> <?php echo $row["Date"]; ?></h2>
+                                        <a href="contenido.php?actual=<?php echo $row['IDcontenido']; ?>">
+                                        <h1><?php echo $row["Name"]; ?></h1>
+                                        </a>
+                                        <h2> <?php echo $row["Date"]; ?></h2>
                                     </div>
                                 </div>
                             <?php
