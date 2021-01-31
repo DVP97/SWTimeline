@@ -8,7 +8,6 @@ $sel_query="SELECT * FROM  Contenido WHERE IDcontenido = $contID;";
 $result = mysqli_query($con,$sel_query);
 
 
-
 $insert_query="INSERT INTO users_Contenido(ID_Contenido,ID_user) VALUES ($contID,$userID);";
 while($row = mysqli_fetch_assoc($result)) { 
 
@@ -84,8 +83,8 @@ while($row = mysqli_fetch_assoc($result)) {
                     <div class="row">
                         <!--Link trailer-->   
                         <div class="col-offset-1"><iframe src="<?php echo $row["trailer"]; ?>"></iframe></div>
-                         <!--Toogle boton manejar lista-->
-                         
+                        <!--Toogle boton manejar lista-->
+                        <a href="insert.php?actual=<?php echo $row["IDcontenido"];?>">Seguir</a>
                     </div>
                 </div>
                 <!--Footer-->
