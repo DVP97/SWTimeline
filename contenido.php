@@ -70,7 +70,7 @@ while($row = mysqli_fetch_assoc($result)) {
                     <div class="row">
                         <div class="col-xs-6 col-md-4">
                             <h3 style="color:#fdfbec; font-size:15px; "><?php echo $row["Release"]; ?></h3>
-                            <h3 style="color:#fdfbec; font-size:15px; "><?php echo $row["Type"]; ?> <!--Plataformas if $row["Type"]=Juego--> </h3>
+                            <h3 style="color:#fdfbec; font-size:15px; "><?php echo $row["Type"]; ?></h3>
                         </div>
                     </div>
                     <!--Sinopsis-->

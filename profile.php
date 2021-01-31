@@ -5,7 +5,7 @@ session_start();
 ?>
 <?php
 //falta crear constructor sentencia
-$sel_query="SELECT Contenido.Name 
+$sel_query="SELECT * 
             FROM Contenido 
             JOIN users_Contenido ON Contenido.IDcontenido = users_Contenido.ID_Contenido
             JOIN users ON users_Contenido.ID_user = users.IDuser 
@@ -64,8 +64,12 @@ $result = mysqli_query($con,$sel_query);
                         <?php
                         foreach($result as $row){
                         ?>
-                        <li><h1 class="title" style="color:#FFE81F"><?php echo $row["Name"]; ?></h1></li>
-                        <?php echo $row["IDcontenido"];?>
+                        <li>
+                            <a href="contenido.php?actual=<?php echo $row['IDcontenido']; ?>">
+                                <h1 class="title" style="color:#FFE81F"><?php echo $row["Name"]; ?></h1>
+                            </a>
+                        </li>
+                       
                         <a href="delete.php?actual=<?php echo $row["IDcontenido"];?>">Eliminar</a>
                         <?php }?>
                     </ol>
