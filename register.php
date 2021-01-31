@@ -40,7 +40,7 @@ VALUES ('$username','$email','".md5($password)."')";
     }else{
 ?>
 <div class="form">
-<h1>Registration</h1>
+<h1 class="title" style="color:#FFE81F">Registro</h1>
 <form name="registration" action="" method="post">
 <input type="text" name="username" placeholder="Username" required />
 <input type="email" name="email" placeholder="Email" required />
