@@ -46,6 +46,8 @@ p {
     display: block;
     padding: 1.25rem;
     position: relative;
+    width: 250px;
+    /*height: 200px;*/
 }
 
 .timeline-nav-button {
@@ -86,18 +88,29 @@ p {
     color: #FFE81F;
 }
 
+/* Tamaño de los bocadillos de los eventos */
 .timeline__item timeline__item--top {
-    width: 595px;
-    height: 420px;
+    width: 100px;
+    height: 200px;
 }
 
+/* Puntos en la línea de tiempo*/
 .timeline--horizontal .timeline__item:after {
-    left: 50%;
+    left: 21%;
     right: auto;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     top: 97%;
+}
+
+.timeline--horizontal .timeline__item .timeline__content:after {
+    border-top: 10px solid #ffe81f;
+}
+
+.timeline--horizontal .timeline__item:after {
+    top: -5%;
+    left: 21%
 }
 
 /* Para el botón de login */
@@ -117,22 +130,17 @@ ol li::before {
     padding-right: 10px;
 }
 
-.col-offset-1 {
-    margin-top: 2px;
-    width: 150px;
-    height:100px;
-}
-
-iframe {
-    height: 100px;
-    width: 100px;
-}
-
 .no-gutters>.col, .no-gutters>[class*=col-] {
     padding-right: 11vh;
     padding-left: 0;
 }
 
-*, *:before, *:after {
-    margin-top: 10px;
-}   
+.iframe {
+    height: 100px;
+    width: 100px;
+}
+
+/* Nav Link */
+#eliminar  {
+    width: 90px;
+}

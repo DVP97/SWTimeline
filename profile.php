@@ -77,8 +77,8 @@ $result = mysqli_query($con,$sel_query);
                                 <h1 class="title" style="color:#FFE81F"><?php echo $row["Name"]; ?></h1>
                             </a>
                         </li>
-                       
-                        <a href="delete.php?actual=<?php echo $row["IDcontenido"];?>">Eliminar</a>
+                        
+                       <a id="eliminar" class="nav-link" href="delete.php?actual=<?php echo $row["IDcontenido"];?>">Eliminar</a>
                         <?php }?>
                     </ol>
                 </div>
