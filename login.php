@@ -18,6 +18,9 @@
 <?php
 require('db.php');
 session_start();
+if(isset($_SESSION['username'])){
+	header("Location: index.php");
+}
 // If form submitted, insert values into the database.
 if (isset($_POST['username'])){
         // removes backslashes
