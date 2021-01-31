@@ -5,12 +5,10 @@ session_start();
 //get contenido actual
 $contID = $_GET["actual"];
 $sel_query="SELECT * FROM  Contenido WHERE IDcontenido = $contID;";
-$result = mysqli_query($con,$sel_query);
 
+$result = mysqli_query($con,$sel_query) or die ( mysqli_error());
 
-$insert_query="INSERT INTO users_Contenido(ID_Contenido,ID_user) VALUES ($contID,$userID);";
 while($row = mysqli_fetch_assoc($result)) { 
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,6 +35,7 @@ while($row = mysqli_fetch_assoc($result)) {
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu"><span class="navbar-toggler-icon"></span></button>
                 <div id="navbarMenu" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
+
                     <?php if(isset($_SESSION["username"])):?>
                         <!--mostrar icono usuario con link a profile.php y botón de Logout-->
                         <li class="nav-item"><img src="media/user_def.jpg" width="60vw" ></img></li>
@@ -84,7 +83,23 @@ while($row = mysqli_fetch_assoc($result)) {
                         <!--Link trailer-->   
                         <div class="col-offset-1"><iframe src="<?php echo $row["trailer"]; ?>"></iframe></div>
                         <!--Toogle boton manejar lista-->
-                        <a href="insert.php?actual=<?php echo $row["IDcontenido"];?>">Seguir</a>
+                        <?php 
+                        //get userID
+                        $user= $_SESSION['username']; 
+                        $sel_query2="SELECT IDuser FROM  users WHERE username='$user';";
+                        $userID = mysqli_query($con,$sel_query2) or die ( mysqli_error());
+                        $user= mysqli_fetch_assoc($userID);
+                        $asdf = $user['IDuser'];
+                        //comprobar si el elemento actual está en la lista del usuario
+                        $comprobar_query="SELECT COUNT(*) as total FROM users_Contenido WHERE ID_contenido=$contID AND ID_user=$asdf;";
+                        $comprobar_lista = mysqli_query($con,$comprobar_query) or die ( mysqli_error());
+                        $comprobacion= mysqli_fetch_assoc($comprobar_lista);
+
+                        $comprob = $comprobacion['total'];
+                        ?>
+                        <?php if(isset($_SESSION["username"]) &&  $comprob==0):?>
+                            <a href="insert.php?actual=<?php echo $row["IDcontenido"];?>">Seguir</a>
+                        <?php endif;?>
                     </div>
                 </div>
                 <!--Footer-->

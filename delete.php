@@ -11,10 +11,8 @@ $row= mysqli_fetch_assoc($userID);
 $asdf = $row['IDuser'];
 
 $qwerty = $_GET["actual"];
-echo $qwerty;
 
 $query = "DELETE FROM users_Contenido WHERE ID_user=$asdf and ID_Contenido=$qwerty;";
-echo $query; 
 $result = mysqli_query($con,$query) or die ( mysqli_error());
 header("Location: profile.php"); 
 ?>
