@@ -3,12 +3,15 @@
 <head>
 <meta charset="utf-8">
 <title>Login</title>
-<link rel="stylesheet" href="css/style.css" />
+
 <!--textStyle CSS-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous">
 <link rel="stylesheet" href="css/textStyle.css">
 <link rel="stylesheet" href="css/timeline_custom_style.css">
 <!--Tab icon-->
 <link rel="icon" type="image/png" href="media/Fulcrum.png">
+<link rel="stylesheet" href="css/style.css" />
 </head>
 <body  background="media/background.jpg">
 <div class="container">
@@ -48,13 +51,13 @@ and password='".md5($password)."'";
 ?>
 <center>
 <div class="form">
-<h1 class="title" style="color:#FFE81F">log in</h1>
-<form action="" method="post" name="login">
-<input type="text" name="username" placeholder="Username" required />
-<input type="password" name="password" placeholder="Password" required />
-<input name="submit" type="submit" value="Login" />
-</form>
-<p>¿Aún no tienes cuenta de SW Timeline? <a href='register.php'>Regístrate aquí</a></p>
+	<h1 class="title" style="color:#FFE81F">log in</h1>
+	<form action="" method="post" name="login">
+		<input class="forma" type="text" name="username" placeholder="Username" required /><br>
+		<input class="forma" type="password" name="password" placeholder="Password" required /><br>
+		<input class="forma" name="submit" type="submit" value="Login" />
+	</form>
+	<p>¿Aún no tienes cuenta de SW Timeline? <a href='register.php'>Regístrate aquí</a></p>
 </div>
 <?php } ?>
 </center>

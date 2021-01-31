@@ -133,3 +133,14 @@ ol li:before {
   border-radius: 2em;
   font-weight: 700;
 }
+form input.forma{
+  width: 30vw;
+  margin-top: 1vh;
+  border-radius: 10px;
+  padding: 3px;
+  text-align: center;
+  text-shadow: 0 0 10px white;
+  border: 2px gainsboro;
+  background: #ffffff0e;
+  color: white;
+}

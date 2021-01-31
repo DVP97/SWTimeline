@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Registration</title>
+
 <!-- Bootstrap4 CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
@@ -44,15 +45,17 @@ VALUES ('$username','$email','".md5($password)."')";
         }
     }else{
 ?>
+<center>
 <div class="form">
-<h1 class="title" style="color:#FFE81F">Registro</h1>
-<form name="registration" action="" method="post">
-<input type="text" name="username" placeholder="Username" required />
-<input type="email" name="email" placeholder="Email" required />
-<input type="password" name="password" placeholder="Password" required />
-<input type="submit" name="submit" value="Register" />
-</form>
+    <h1 class="title" style="color:#FFE81F">Registro</h1>
+    <form name="registration" action="" method="post">
+        <input class="forma" type="text" name="username" placeholder="Username" required /><br>
+        <input class="forma" type="email" name="email" placeholder="Email" required /><br>
+        <input class="forma" type="password" name="password" placeholder="Password" required /><br>
+        <input class="forma" type="submit" name="submit" value="Register" />
+    </form>
 </div>
+</center>
 <?php } ?>
 </body>
 </html>
