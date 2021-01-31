@@ -42,7 +42,7 @@ session_start();
             </nav>
             <!--vista que se actualiza sin necesidad de cambiar de página-->
             <div class="container" id="vista">
-                <h1 class="title text-center" style="color: cyan;" >Próximamente, en una galaxia muy cercana...</h1>
+                <h1 class="title text-center" style="color: cyan;" >Hace mucho tiempo, en una galaxia muy muy lejana...</h1>
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-4"><button class="btn-block epoca1" id="btnOldRep"><div class="text-center">Antigua República</div></button></div>
