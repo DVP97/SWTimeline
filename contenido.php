@@ -23,6 +23,7 @@ while($row = mysqli_fetch_assoc($result)) {
         <link rel="stylesheet" href="css/textStyle.css">
         <!--Custom CSS-->
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/timeline_custom_style.css">
         <!--Tab icon-->
         <link rel="icon" type="image/png" href="media/Fulcrum.png">
     </head>
@@ -98,7 +99,7 @@ while($row = mysqli_fetch_assoc($result)) {
                         $comprob = $comprobacion['total'];
                         ?>
                         <?php if(isset($_SESSION["username"]) &&  $comprob==0):?>
-                            <a href="insert.php?actual=<?php echo $row["IDcontenido"];?>">Seguir</a>
+                            <a id="seguir" class="nav-link" href="insert.php?actual=<?php echo $row["IDcontenido"];?>">Seguir</a>
                         <?php endif;?>
                     </div>
                 </div>
