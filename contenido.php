@@ -99,7 +99,7 @@ while($row = mysqli_fetch_assoc($result)) {
                         $comprob = $comprobacion['total'];
                         ?>
                         <?php if(isset($_SESSION["username"]) &&  $comprob==0):?>
-                            <a id="seguir" class="nav-link" href="insert.php?actual=<?php echo $row["IDcontenido"];?>">Seguir</a>
+                            <a id="seguir" class="nav-link" style="color:white" href="insert.php?actual=<?php echo $row["IDcontenido"];?>">Seguir</a>
                         <?php endif;?>
                     </div>
                 </div>
