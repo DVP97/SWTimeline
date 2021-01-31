@@ -40,7 +40,7 @@ $result = mysqli_query($con,$sel_query);
                                             <a href="contenido.php?actual=<?php echo $row['IDcontenido']; ?>">
                                             <h1 class="title" style="color:#FFE81F"><?php echo $row["Name"]; ?></h1>
                                             </a>
-											<h2> <?php echo $row["Date"]; ?></h2>
+											<h2> <?php echo $row["Date"]; ?> ABY </h2>
                                     </div>
                                 </div>
                             <?php
