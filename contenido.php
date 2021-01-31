@@ -52,7 +52,7 @@ while($row = mysqli_fetch_assoc($result)) {
             <!--Marco info contenido-->
             <div class="row no-gutters">
                 <!--Columna Portada-->
-                <div class="col-12 col-lg-6">
+                <div class="col-4 col-lg-4">
                     <!--cambiar src por variable que incluya la ruta relativa a la portada-->
                     <img src="media/Fulcrum.png" alt="icon" style="max-height:600px">
                 </div> 
@@ -79,7 +79,7 @@ while($row = mysqli_fetch_assoc($result)) {
                         </div>
                     </div>
                     
-                    
+                    <br>
                     <div class="row">
                         <!--Link trailer-->   
                         <div class="col-offset-1"><iframe src="<?php echo $row["trailer"]; ?>"></iframe></div>

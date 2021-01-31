@@ -48,8 +48,6 @@ p {
     position: relative;
 }
 
-
-
 .timeline-nav-button {
     background-color: #fff;
     border: 2px solid #ddd;
@@ -112,3 +110,29 @@ ol li::before {
     margin-left: -45px;
     text-align: center;
 }
+
+/* Para contenido.php */
+.col-lg-6 {
+    margin-right: 100px;
+    padding-right: 10px;
+}
+
+.col-offset-1 {
+    margin-top: 2px;
+    width: 150px;
+    height:100px;
+}
+
+iframe {
+    height: 100px;
+    width: 100px;
+}
+
+.no-gutters>.col, .no-gutters>[class*=col-] {
+    padding-right: 11vh;
+    padding-left: 0;
+}
+
+*, *:before, *:after {
+    margin-top: 10px;
+}   
